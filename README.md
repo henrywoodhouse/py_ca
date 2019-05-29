@@ -12,8 +12,8 @@ priv_ca.generate_csr() # Creates a CSR
 priv_ca.sign_csr() # Signs the CSR using the root keys generated earlier
 ```
 ## Module Methods
-##### load(key_path, cert_path, password)
-Loads a root certificate and key from the specified path
+### load(key_path, cert_path, password)
+Loads a root certificate and key from the specified path  
 **Parameters:**
 * **key_path** - The path to the private key, defaults to './'
 * **cert_path** - The path to the certificate, defaults to './'
@@ -21,8 +21,8 @@ Loads a root certificate and key from the specified path
 
 **Returns:**
 	
-##### save(path, password_length, password)
-Saves the root certificate and key in memory to the specified path
+### save(path, password_length, password)
+Saves the root certificate and key in memory to the specified path  
 **Parameters:**
 * **path** - The folder to which the private key/certificate should be saved to, defaults to './'
 * **password_length** - The length of the encryption password, defaults to 32 characters
@@ -32,8 +32,8 @@ Saves the root certificate and key in memory to the specified path
 * **password** - The password used to encrypt the private key
 	
 
-##### generate(country_name, state, locality, organization, common_name, dns_name, validity)
-Generates a private key and certificate for the root authority
+### generate(country_name, state, locality, organization, common_name, dns_name, validity)
+Generates a private key and certificate for the root authority  
 **Parameters:**
 * **counrty_name** - The country name for the SSL certificate, defaults to 'XX'
 * **state** - The state for the SSL certificate, defaults to 'Undefined'
@@ -46,14 +46,14 @@ Generates a private key and certificate for the root authority
 **Returns:**
 
 	
-##### reset()
-Overwrites the private key and certificate stored in the object
+### reset()
+Overwrites the private key and certificate stored in the object  
 **Parameters:**
 
 **Returns:**
 	
-##### sign_csr(csr_path, cert_path, server)
-Signs the supplied CSR using the root authorities private key
+### sign_csr(csr_path, cert_path, server)
+Signs the supplied CSR using the root authorities private key  
 **Parameters:**
 * **csr_path** - The path to the CSR file, defaults to './csr.pem'
 * **cert_path** - The path to the folder where the certificate is placed, defaults to './'
@@ -62,8 +62,8 @@ Signs the supplied CSR using the root authorities private key
 **Returns:**
 * **serial_id** - A unique key to identify the generated certificate with
 
-##### generate_csr(path, country_name, state, locality, organization, common_name, validity, password)
-Generates a CSR
+### generate_csr(path, country_name, state, locality, organization, common_name, validity, password)
+Generates a CSR  
 **Parameters:**
 * **counrty_name** - The country name for the SSL certificate, defaults to 'XX'
 * **state** - The state for the SSL certificate, defaults to 'Undefined'
