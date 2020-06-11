@@ -1,6 +1,8 @@
 # Python private certificate authority
 This module provides a private certificate authority which can generate it's own credentials and then create and sign CSR's for use elsewhere.
 
+Python 3.6 or newer is required.
+
 **Example usage:**
 ```python
 from pyca import pyca

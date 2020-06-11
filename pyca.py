@@ -136,8 +136,9 @@ class pyca:
 		return serial_id
 
 
-	def generate_csr(self, path='./', country_name=u"XX", state=u"Undefined", locality=u"Undefined", 
-					organization=u"Undefined", common_name=u"Undefined", validity=365, password=None):
+	def generate_csr(self, path='./', country_name=u"XX", state=u"Undefined", 
+					locality=u"Undefined", organization=u"Undefined", 
+					common_name=u"Undefined", validity=365, password_length=32, password=None):
 		if password is None:
 			password = secrets.token_urlsafe(password_length)
 		key = rsa.generate_private_key(
